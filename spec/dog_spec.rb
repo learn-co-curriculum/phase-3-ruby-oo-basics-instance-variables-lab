@@ -12,17 +12,15 @@ describe 'name=' do
     lassie = Dog.new
     lassie.name = 'Lassie'
 
-    expect(lassie.name).to eq('Lassie')
+    expect(lassie.instance_variable_get("@this_dogs_name")).to eq('Lassie')
   end
 end
 
 describe 'name' do
   it 'defines an instance variable @this_dogs_name' do
     lassie = Dog.new
-    lassie.name = 'Lassie'
-    puts lassie.name
+    lassie.instance_variable_set("@this_dogs_name","Lassie")
 
-    expect(STDOUT).to receive(:puts).with('Lassie')
-
+    expect(lassie.name).to eq("Lassie")
   end
 end
