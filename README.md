@@ -39,7 +39,7 @@ An **instance variable** is a variable that is accessible in any instance method
 
 Let's say we have a class called `Dog` that is responsible for producing individual dog objects. We want each dog to be able to have a name and show its name. So we need to write some methods:
 
-Make a file called `dog.rb` inside the `lib` folder. This is where we'll create our Dog class. Type in the following code.
+Open `dog.rb` inside the `lib` folder. This is where we'll create our Dog class. Type in the following code.
 
 ```ruby
 class Dog
