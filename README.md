@@ -57,7 +57,7 @@ Here we've defined two instance methods, the `name=`, or "name equals" method, a
 
 Our two methods therefore are responsible for "setting" and "getting" an individual dog's name.
 
-Here's how it **should** work in practice:
+Here's the functionality we want to achieve:
 
 ```ruby
 lassie = Dog.new
@@ -65,6 +65,8 @@ lassie.name = "Lassie"
 
 lassie.name #=> "Lassie"
 ```
+
+Our new dog instance should be assigned a name and know its name.
 
 In your `dog.rb` file add the above code. This should create a new dog instance, give it a name (Lassie) and try to access- or read- its name.
 
