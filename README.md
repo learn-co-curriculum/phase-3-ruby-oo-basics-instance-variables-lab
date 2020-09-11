@@ -9,7 +9,7 @@
 When we build objects through our own classes we know we can add behavior to the objects through instance methods. But how do we give our objects data? For example, how would we teach a dog what its name is? Or what breed it is? How do we put data inside of an instance of an object so that each dog can have its own name and own breed? How do we give objects attributes or properties?
 
 ## Instructions
-Run your tests with `learn` to get an overview of what we are trying to do. Then follow along below for how to get your tests to pass.
+Run your tests with `learn test` to get an overview of what we are trying to do. Then follow along below for how to get your tests to pass.
 
 ## What is an instance variable?
 We've been working with variables for a while now. For example:
@@ -66,7 +66,7 @@ Our new dog instance should be assigned a name and know its name.
 
 In your `dog.rb` file add the above code. This should create a new dog instance, give it a name (Lassie) and try to access- or read- its name.
 
-Run `learn` again. You should see an error message, with the following snippet inside it:
+Run `learn test` again. You should see an error message, with the following snippet inside it:
 
 ```
  `name': undefined local variable or method `this_dogs_name''
@@ -102,7 +102,7 @@ puts lassie.name
 
 ```
 
-Run `learn` again and your tests should now be passing.
+Run `learn test` again and your tests should now be passing.
 
 Why did it work? Inside the `#name=` method, we set the value of `@this_dogs_name` equal to whatever string is passed in as an argument. Then, we are able to call on that same instance variable in a totally separate method, the `#name` method.
 
