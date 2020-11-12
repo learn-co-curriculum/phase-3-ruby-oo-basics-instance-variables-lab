@@ -1,4 +1,4 @@
-# Instance Variables
+# Instance Variables Lab
 
 ## Objectives
 1. Define instance variables.
