@@ -54,8 +54,8 @@ individual dog objects. We want each dog instance to be able to have a name and
 to show its name. So we need to write two methods: one to _set_ the dog's name
 and one to _get_ the dog's name.
 
-Open `dog.rb` inside the `lib` folder. This is where we'll create our `Dog`
-class. Type in the following code.
+Open `dog.rb` inside the `lib` folder and add the following two methods to the
+`Dog` class:
 
 ```ruby
 class Dog
@@ -89,10 +89,13 @@ In the code above, we are creating a new `Dog` instance and assigning it a name
 then asking it to return its name.
 
 In your `dog.rb` file add the above code. Run `learn test` again. You should see
-an error message, with the following snippet inside it:
+output that includes something like this:
 
 ```bash
- `name': undefined local variable or method `this_dogs_name''
+Failure/Error: this_dogs_name
+
+NameError:
+  undefined local variable or method `this_dogs_name' for #<Dog:0x00007fa7909a3078>
 ```
 
 Uh-oh. Looks like the `#name` method doesn't know about the `this_dogs_name`
@@ -117,7 +120,7 @@ arguments (as would be the case with local variables).
 Let's refactor our `Dog` class to use an instance variable instead of a local
 variable to set and get an individual dog's name.
 
-Open up `dog.rb` and change the `Dog` class in the following way:
+Inside `dog.rb`, change the `Dog` class in the following way:
 
 ```ruby
 class Dog
@@ -138,7 +141,7 @@ puts lassie.name
 
 ```
 
-Run `learn test` again and your tests should now be passing.
+Run `learn test` again; your tests should now be passing.
 
 To summarize: in Object-Oriented Ruby, we want to be able to set attributes on
 the instances of our classes. We also want those objects to "know" the values of
@@ -146,8 +149,8 @@ their attributes. To do this, we create a _setter_ method, which takes an
 argument and sets the instance variable equal to that value. We also create a
 _getter_ method that will return the value of the instance variable. By using
 the `@` in front of the variable name, the variable that's created inside the
-_setter_ method is available inside the _getter_ method (and any other methods
-in our class).
+_setter_ method is available inside the _getter_ method (and inside any other
+methods in our class).
 
 ## Conclusion
 
