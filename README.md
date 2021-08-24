@@ -24,14 +24,14 @@ overview of what we are trying to do. Follow along to get the tests to pass.
 
 We've been working with variables for a while now. For example:
 
-```ruby
+```rb
 what_time_is_it = "Lab time"
 ```
 
 The code above sets a variable, `what_time_is_it`, equal to the string
 `"Lab time"`. Now we can use that variable to read and operate on that string.
 
-```ruby
+```rb
 what_time_is_it #=> "Lab time"
 
 what_time_is_it.upcase #=> "LAB TIME"
@@ -76,7 +76,7 @@ and one to _get_ the dog's name.
 Open `dog.rb` inside the `lib` folder and add the following two methods to the
 `Dog` class:
 
-```ruby
+```rb
 class Dog
   def name=(dog_name)
     this_dogs_name = dog_name
@@ -97,7 +97,7 @@ for "setting" and "getting" an individual dog's name.
 We want the methods to act as mechanisms to expose data from inside of the
 object to the outside world; in other words, we want to be able to do this:
 
-```ruby
+```rb
 lassie = Dog.new
 lassie.name = "Lassie"
 
@@ -110,7 +110,8 @@ then asking it to return its name.
 In your `dog.rb` file add the above code. Run `learn test` again. You should see
 output that includes something like this:
 
-```bash
+```console
+$ learn test
 Failure/Error: this_dogs_name
 
 NameError:
@@ -145,7 +146,7 @@ local variable to set and get an individual dog's name.
 
 Inside `dog.rb`, change the `Dog` class in the following way:
 
-```ruby
+```rb
 class Dog
 
   def name=(dogs_name)
